@@ -13,7 +13,10 @@ The command writes the static site to `out/` with:
 - HTML routes for the homepage, core pages, service pages and blog pages
 - `sitemap.xml`
 - `robots.txt`
+- `404.html`
 - copied public assets, including `logo-thulir.svg`
+
+The generated `out/` directory is committed on purpose. This gives Vercel a ready-to-serve static output even if its dashboard skips the build command or the project is uploaded as static files.
 
 ## Root `index.html`
 

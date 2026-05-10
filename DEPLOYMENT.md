@@ -21,6 +21,7 @@ The included `vercel.json` configures:
 
 - Build command: `npm run build`
 - Output directory: `out`
+- Install command: skips dependency installation because the static exporter uses Node built-ins only
 - Static-site mode with clean URLs and trailing slashes
 - Basic security headers
 
@@ -30,6 +31,16 @@ Deploy steps:
 2. Keep the detected settings from `vercel.json`.
 3. Set the production domain, for example `thulirinterior.com`.
 4. Deploy.
+
+### Vercel CLI deployment
+
+If you have a Vercel token and the CLI available, deploy with:
+
+```bash
+vercel deploy --prod --yes --token "$VERCEL_TOKEN"
+```
+
+This environment does not include a Vercel token, so production deployment must be run from an authenticated machine or connected Vercel project.
 
 ## Netlify
 

@@ -60,6 +60,7 @@ The included `netlify.toml` configures:
 
 - Build command: `npm run build`
 - Publish directory: `out`
+- `NETLIFY_NEXT_PLUGIN_SKIP=true` so Netlify does not run `@netlify/plugin-nextjs` against the static `out/` folder
 - Basic security headers
 - A canonical redirect for `/thank-you`
 
@@ -69,6 +70,10 @@ Deploy steps:
 2. Keep the detected settings from `netlify.toml`.
 3. Set the production domain, for example `thulirinterior.com`.
 4. Deploy.
+
+### Fixing Netlify `@netlify/plugin-nextjs` failures
+
+This site is deployed as static HTML from `out/`, so the Netlify Next.js Runtime/plugin should not run. The `netlify.toml` file sets `NETLIFY_NEXT_PLUGIN_SKIP = "true"` for this reason. If your Netlify dashboard still lists `@netlify/plugin-nextjs` under **Plugins**, disable or remove that plugin in the Netlify UI and redeploy.
 
 ## Full Next.js build
 

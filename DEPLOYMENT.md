@@ -15,6 +15,10 @@ The command writes the static site to `out/` with:
 - `robots.txt`
 - copied public assets, including `logo-thulir.svg`
 
+## Root `index.html`
+
+A committed root-level `index.html` is included as a no-build fallback for hosts or dashboards that look for an `index.html` directly in the Git repository. Production Vercel/Netlify deployments should still use `npm run build` and publish the generated `out/` directory.
+
 ## Vercel
 
 The included `vercel.json` configures:

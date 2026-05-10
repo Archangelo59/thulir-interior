@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/build.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:next": "next build"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",

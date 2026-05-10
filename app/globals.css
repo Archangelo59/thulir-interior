@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ivory: #FFFDF8;
+  --forest: #0F2B14;
+  --primary: #1F7A2E;
+  --accent: #36E000;
+  --sand: #F4EFE5;
+  --charcoal: #222222;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--accent); color: var(--forest); }
+.focus-ring { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-thulir-accent focus-visible:ring-offset-2; }
+.container-pad { @apply mx-auto max-w-7xl px-5 sm:px-8; }
+.eyebrow { @apply text-xs font-semibold uppercase tracking-[0.32em] text-thulir-primary; }
+.luxury-card { @apply rounded-[2rem] border border-thulir-forest/10 bg-white/70 shadow-glow backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-thulir-primary/30; }
+.organic-bg {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(54, 224, 0, 0.15), transparent 28rem),
+    radial-gradient(circle at 90% 20%, rgba(31, 122, 46, 0.18), transparent 24rem),
+    linear-gradient(135deg, #fffdf8 0%, #f4efe5 100%);
+}

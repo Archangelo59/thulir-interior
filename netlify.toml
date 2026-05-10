@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  # This project publishes a pre-rendered static `out/` directory, not Netlify's
+  # Next.js runtime output. Skip the Next.js Runtime/plugin even if it was added
+  # from the Netlify UI, otherwise the plugin fails while looking for `.next`.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you/"
+  status = 301

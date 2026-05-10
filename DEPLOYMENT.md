@@ -23,6 +23,7 @@ The included `vercel.json` configures:
 - Output directory: `out`
 - Install command: skips dependency installation because the static exporter uses Node built-ins only
 - Static-site mode with clean URLs and trailing slashes
+- Rewrites that map `/` to `/index.html` and extensionless paths to their generated `index.html` files
 - Basic security headers
 
 Deploy steps:
@@ -41,6 +42,10 @@ vercel deploy --prod --yes --token "$VERCEL_TOKEN"
 ```
 
 This environment does not include a Vercel token, so production deployment must be run from an authenticated machine or connected Vercel project.
+
+### Fixing Vercel `404: NOT_FOUND`
+
+If Vercel shows a platform-level `404: NOT_FOUND`, redeploy the project after this configuration is present and confirm the build logs show `Built 27 static routes to out/`. The deployment must publish the generated `out/` directory, not the repository root or only the `public/` folder.
 
 ## Netlify
 

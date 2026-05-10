@@ -111,6 +111,7 @@ for (const [slug, title, description] of allRoutes) {
 const sitemap = allRoutes.map(([slug]) => `  <url><loc>https://thulirinterior.com/${slug}</loc></url>`.replace('//</loc>', '/</loc>')).join('\n');
 await writeFile(path.join(outDir, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap}\n</urlset>\n`);
 await writeFile(path.join(outDir, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: https://thulirinterior.com/sitemap.xml\n');
+await writeFile(path.join(outDir, '404.html'), html({ slug: '', title: 'Page Not Found', description: 'The requested THULIR page was not found. Use the navigation to continue exploring our Chennai interior design services.' }));
 
 console.log(`Built ${allRoutes.length} static routes to ${path.relative(process.cwd(), outDir)}/`);
 console.log('Tip: run `npm install` and `npm run build:next` when registry access is available for the full Next.js production build.');

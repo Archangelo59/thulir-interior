@@ -1,0 +1,10 @@
+<svg width="360" height="150" viewBox="0 0 360 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">THULIR logo</title><desc id="desc">A green house roof and sprouting leaf mark over the word THULIR.</desc>
+<path d="M20 76L95 12L172 76" stroke="#36E000" stroke-width="15" stroke-linecap="square"/>
+<path d="M135 36V86" stroke="#36E000" stroke-width="14"/>
+<rect x="76" y="55" width="13" height="13" fill="#222222"/><rect x="94" y="55" width="13" height="13" fill="#222222"/><rect x="76" y="73" width="13" height="13" fill="#222222"/><rect x="94" y="73" width="13" height="13" fill="#222222"/>
+<path d="M124 91C172 111 208 93 244 60C275 31 309 21 340 27" stroke="#36E000" stroke-width="12" stroke-linecap="round"/>
+<path d="M240 56C238 28 263 11 269 7C281 32 272 51 253 62C246 66 240 65 240 56Z" fill="#1DD700"/>
+<path d="M306 26C327 11 352 24 359 43C334 43 319 38 306 26Z" fill="#1DD700"/>
+<text x="5" y="137" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="56" letter-spacing="2" fill="#1F7A2E">THULIR</text>
+</svg>
